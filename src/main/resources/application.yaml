@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: config-service
+
   cloud:
     config:
       server:
@@ -11,8 +12,7 @@ spring:
           uri: https://github.com/DharmalaRepo/society-config-repo
           default-label: main
           clone-on-start: true
-          username: DharmalaRepo
-          password: ${{secrets.GITHUB_TOKEN}}
+          # username and password omitted for public repo
 
 management:
   endpoints:
