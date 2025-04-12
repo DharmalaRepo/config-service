@@ -13,3 +13,13 @@ spring:
           clone-on-start: true
           username: DharmalaRepo
           password: ${{secrets.GITHUB_TOKEN}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
